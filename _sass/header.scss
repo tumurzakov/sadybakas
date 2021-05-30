@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .header__content {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/assets/images/peak.png);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/assets/images/peak_m.png);
+    }
+}
+
