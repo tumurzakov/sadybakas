@@ -1,0 +1,24 @@
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js'></script>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css'></link>
+
+<div class ="gallery container">
+    {% assign sorted = site.static_files | sort: 'date' | reverse %}
+
+    <div id='gallary'></div>
+
+    <script>
+        var files = {{ sorted|jsonify }};
+
+        $(function() {
+            var images = getGalleryImages(files);
+            $('#gallary').nanogallery2({
+                items: images,
+
+                thumbnailWidth: "auto",
+                thumbnailHeight:  300,
+            });
+        });
+
+    </script>
+</div>
