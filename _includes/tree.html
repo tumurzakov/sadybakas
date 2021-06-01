@@ -1,0 +1,16 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.css"></link>
+
+<div id="tree"></div>
+
+<script>
+    var config = {
+        chart: {
+            container: '#tree',
+        },
+        nodeStructure: getTreeData()
+    };
+
+    var chart = new Treant(config);
+</script>
